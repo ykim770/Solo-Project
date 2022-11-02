@@ -15,7 +15,6 @@ const BackEndCheck = () => {
   });
   return (
     <>
-      <h2>This should say express if backend connected:</h2>
       <div>{data}</div>
     </>
   );

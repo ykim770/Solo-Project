@@ -38,13 +38,31 @@ goalController.getGoal = async (req, res, next) => {
 // deleteGoal middleware
 goalController.deleteGoal = async (req, res, next) => {
   try {
-    console.log('this is the incoming req.id', req.params.id);
     const deletedGoal = await Goal.findOneAndDelete({ _id: req.params.id });
-    console.log(deletedGoal);
     return res.status(200).json(deletedGoal);
   } catch (err) {
     return next({
       log: 'Error in goalController.deleteGoal',
+      status: 400,
+      message: { err: err },
+    });
+  }
+};
+
+// editGoal middleware
+goalController.editGoal = async (req, res, next) => {
+  const { goalText } = req.body;
+  if (!goalText) return next({ log: 'Invalid Request', status: 400 });
+  try {
+    const editedGoal = await Goal.findOneAndUpdate(
+      { _id: req.params.id },
+      { goalText },
+      { new: true }
+    );
+    return res.status(200).json(editedGoal);
+  } catch (err) {
+    return next({
+      log: 'Error in goalController.editGoal',
       status: 400,
       message: { err: err },
     });

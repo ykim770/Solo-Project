@@ -17,4 +17,5 @@ router.get('/goal', goalController.getGoal);
 // runs once to delete the specified id
 router.delete('/goal/:id', goalController.deleteGoal);
 
+router.put('/goal/:id', goalController.editGoal);
 module.exports = router;
