@@ -5,10 +5,8 @@ const BackEndCheck = () => {
   useEffect(() => {
     (async function callBackend() {
       try {
-        console.log('entered backend try block');
-        const res = await fetch('http://localhost:3000/api');
+        const res = await fetch('http://localhost:3000/express');
         const body = await res.json();
-        console.log(body);
         setData(body.express);
       } catch (err) {
         console.log('broke at the response');

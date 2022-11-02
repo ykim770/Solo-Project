@@ -1,3 +1,12 @@
 * {
   background-color: lightblue;
 }
+.delete-button {
+  display: inline;
+}
+.main-goal-wrapper {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
