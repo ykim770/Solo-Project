@@ -42,7 +42,7 @@ const MainGoal = ({ text, index, handler }) => {
             <button type='submit'>&#10004;</button>
           </form>
         ) : (
-          <h2>{goalText}</h2>
+          <p className='goal-text'>{goalText}</p>
         )}
         <button
           className='delete-button'

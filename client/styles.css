@@ -1,12 +1,154 @@
 * {
-  background-color: lightblue;
+  background-color: rgb(243 238 229);
 }
 .delete-button {
   display: inline;
+  background-color: rgb(227, 95, 95);
+  border-radius: 25px;
+  width: 25px;
+  color: white;
+  border-style: none;
+  position: absolute;
+  top: -12px;
+  left: 1260px;
+}
+.app-container {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+.all-goal-container {
+  margin-inline: auto;
+  margin-block: 60px;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.goal-text {
+  font-size: 24px;
+  background-color: inherit;
 }
 .main-goal-wrapper {
+  position: relative;
+  background-color: rgb(243, 243, 243);
+  height: 60px;
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border: 2px solid rgb(100, 98, 98);
+  border-radius: 20px;
+  box-shadow: 6px 6px 4px rgb(173, 168, 168);
+  margin-block: 15px;
+  padding-inline: 20px;
+}
+.add-goal {
+  border-radius: 5px;
+}
+#new-goal {
+  border-radius: 5px;
+  background-color: rgb(243, 243, 243);
+}
+.add-goal {
+  background-color: rgb(243, 243, 243);
+}
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: rgb(218, 154, 85);
+}
+.form {
+  text-align: center;
+}
+#goal-error {
+  color: red;
+}
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  height: 100%;
+}
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container {
+  /* The following are locally scoped custom properties that only apply to container */
+  --max-width: 1110px;
+  --padding: 1rem;
+  /* Chooses between our var --max-width or 100% - 2rem */
+  /* (var(--padding)*2)=2rem sets padding on each side to be 1 */
+  width: min(var(--max-width), 100% - var(--padding) * 2);
+  /* centers horizontally */
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: grid;
+  /* Value that corresponds to the gap between! columns/rows created by grid */
+  gap: 1rem;
+}
+
+@media (min-width: 50em) {
+  .even-columns {
+    /* column is fully occupied first */
+    grid-auto-flow: column;
+    /* If this was grid-auto-flow: row -> each row would be fully occupied */
+    grid-auto-columns: 1fr;
+  }
 }

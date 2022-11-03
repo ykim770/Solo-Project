@@ -99,6 +99,7 @@ const App = () => {
             );
             // reset input state after button click
             setInput('');
+            setValid(true);
           });
       } catch (err) {
         console.log('Check the createGoal function in App.jsx');
@@ -106,9 +107,9 @@ const App = () => {
     })();
   };
   return (
-    <div>
-      {/* This entire form should add more MainGoals */}
-      <form onSubmit={handleSubmit}>
+    <div className='app-container'>
+      {/* This entire form should add more MainGoals */}{' '}
+      <form className='form' onSubmit={handleSubmit}>
         <input
           id='new-goal'
           type='text'
@@ -121,11 +122,11 @@ const App = () => {
           Add a Goal
         </button>
         <br></br>
-        {!valid && <span id='goal=error'>Please enter a goal</span>}
+        {!valid && <span id='goal-error'>Please enter a goal</span>}
       </form>
-      {goalsArr}
-      <p>{press.toString()}</p>
-      <BackEndCheck />
+      <div className='all-goal-container'>{goalsArr}</div>
+      {/* <p>{press.toString()}</p>
+      <BackEndCheck /> */}
     </div>
   );
 };
