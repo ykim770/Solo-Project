@@ -12,6 +12,28 @@
   top: -12px;
   left: 1260px;
 }
+.delete-button:hover {
+  cursor: pointer;
+}
+.task-container {
+  text-align: center;
+}
+.task-submit {
+  padding-left: 6px;
+  background-color: white;
+  width: 300px;
+  border-radius: 12px;
+  font-size: 24px;
+  background-color: rgb(243, 243, 243);
+}
+.task-button {
+  padding: 2px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+.task-button:hover {
+  cursor: pointer;
+}
 .app-container {
   padding: 0px;
   margin: 0px;
@@ -21,14 +43,82 @@
   margin-inline: auto;
   margin-block: 60px;
 }
+.main-goal {
+  width: 100%;
+  margin-block: 30px;
+}
 body {
   font-family: 'Roboto', sans-serif;
+}
+#new-goal {
+  font-size: 24px;
+  border-radius: 14px;
+  padding-left: 6px;
+  width: 300px;
+  background-color: rgb(243, 243, 243);
+}
+.add-goal {
+  border: none;
+  background-color: rgb(83, 165, 83) !important;
+  color: white;
+  width: 36px;
+  font-size: 24px;
+  border-radius: 40px !important;
+  margin-left: 10px;
+}
+.add-goal:hover {
+  cursor: pointer;
+}
+.edit-form {
+  background-color: inherit;
+}
+.edit-button {
+  padding: 2px;
+  border-radius: 8px;
+}
+.edit-button:hover {
+  cursor: pointer;
+}
+.save-button {
+  border-style: none;
+  background-color: rgb(83, 165, 83);
+  color: white;
+  border-radius: 25px;
+  width: 25px;
+  margin-left: 6px;
+}
+.save-button:hover {
+  cursor: pointer;
 }
 .goal-text {
   font-size: 24px;
   background-color: inherit;
 }
+.edit-goal {
+  background-color: inherit;
+  font-size: 24px;
+  border: 2px solid rgb(100, 98, 98);
+  border-radius: 8px;
+  padding-right: 0px;
+  padding-left: 4px;
+  width: 400px;
+}
+.each-task {
+  font-size: 20px;
+  border-radius: 20px;
+  margin-block: 15px;
+  padding-inline: 20px;
+  display: flex;
+  background-color: rgb(243, 243, 243);
+  height: 40px;
+  width: 30%;
+  align-items: center;
+  margin-inline: auto;
+  justify-content: space-between;
+  border: 2px solid rgb(100, 98, 98);
+}
 .main-goal-wrapper {
+  margin-inline: auto;
   position: relative;
   background-color: rgb(243, 243, 243);
   height: 60px;
@@ -41,16 +131,6 @@ body {
   box-shadow: 6px 6px 4px rgb(173, 168, 168);
   margin-block: 15px;
   padding-inline: 20px;
-}
-.add-goal {
-  border-radius: 5px;
-}
-#new-goal {
-  border-radius: 5px;
-  background-color: rgb(243, 243, 243);
-}
-.add-goal {
-  background-color: rgb(243, 243, 243);
 }
 h1 {
   font-family: 'Inter', sans-serif;

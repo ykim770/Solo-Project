@@ -113,13 +113,13 @@ const App = () => {
         <input
           id='new-goal'
           type='text'
-          placeholder='Goal'
+          placeholder='Enter a Goal'
           name='goal'
           value={input}
           onChange={handleInputChange}
         ></input>
         <button className='add-goal' type='submit'>
-          Add a Goal
+          +
         </button>
         <br></br>
         {!valid && <span id='goal-error'>Please enter a goal</span>}
