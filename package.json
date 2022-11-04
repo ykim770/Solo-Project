@@ -1,7 +1,6 @@
 {
   "name": "solo-project",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development --open --hot",
@@ -25,7 +24,8 @@
     "mongoose": "^6.7.0",
     "nodemon": "^2.0.20",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3"
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
@@ -38,5 +38,14 @@
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ykim770/Solo-Project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ykim770/Solo-Project/issues"
+  },
+  "homepage": "https://github.com/ykim770/Solo-Project#readme",
+  "description": ""
 }

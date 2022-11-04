@@ -58,6 +58,7 @@ body {
   width: 300px;
   background-color: rgb(243, 243, 243);
   box-shadow: 4px 4px 4px rgb(173, 168, 168);
+  margin-bottom: 5px;
 }
 .add-goal {
   border: none;
@@ -145,6 +146,7 @@ h1 {
   text-align: center;
 }
 #goal-error {
+  margin-left: -20px;
   color: red;
 }
 /* CSS Reset */

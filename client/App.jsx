@@ -3,9 +3,9 @@ import BackEndCheck from './components/BackEndCheck.jsx';
 import MainGoal from './containers/MainGoal.jsx';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Route, Switch } from 'react-router-dom';
 
 const App = () => {
-  const [press, setPress] = useState(false);
   // user input hook
   const [input, setInput] = useState('');
   // Somehow change this to rely upon DB -> have a useeffect hook that queries a database and populates the goalsArr
